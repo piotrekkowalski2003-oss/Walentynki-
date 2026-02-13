@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dla Emilii ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        color: white;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    .gallery {
+        margin: 20px auto;
+    }
+
+    .gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .buttons {
+        margin-top: 30px;
+        position: relative;
+        height: 200px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    #yes {
+        background-color: #ff4d6d;
+        color: white;
+    }
+
+    #no {
+        background-color: #444;
+        color: white;
+        position: absolute;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Emilia, czy będziesz ze mną na zawsze? ❤️</h1>
+
+<div class="gallery">
+    <!-- TU WSTAW SWOJE ZDJĘCIA -->
+    <img src="zdjecie1.jpg" alt="Nasze zdjęcie">
+    <img src="zdjecie2.jpg" alt="Nasze zdjęcie">
+    <img src="zdjecie3.jpg" alt="Nasze zdjęcie">
+</div>
+
+<div class="buttons">
+    <button id="yes" onclick="showLove()">Tak ❤️</button>
+    <button id="no">Nie 😜</button>
+</div>
+
+<div id="message"></div>
+
+<script>
+    const noButton = document.getElementById("no");
+
+    noButton.addEventListener("mouseover", function() {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+        noButton.style.left = x + "px";
+        noButton.style.top = y + "px";
+    });
+
+    function showLove() {
+        document.getElementById("message").innerHTML = "Wiedziałem! Kocham Cię Emilia ❤️🥰";
+    }
+</script>
+
+</body>
+</html>
